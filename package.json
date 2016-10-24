@@ -1,0 +1,22 @@
+{
+  "name": "jacs-view",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apjames93/jacsView.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/apjames93/jacsView/issues"
+  },
+  "homepage": "https://github.com/apjames93/jacsView#readme",
+  "dependencies": {
+    "gitignore": "^0.6.0"
+  }
+}

@@ -1,0 +1,55 @@
+.right-portal{
+  position: relative;
+  display: block;
+  height: 2em;
+  width: auto;
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
+  margin-top: .5em;
+  z-index: 1;
+}
+.pull-right {
+  float: right !important;
+}
+.portal-box{
+  height: 2em;
+  width: auto;
+}
+.svg-portal{
+  height: 28px;
+  width: 28px;
+  float: right !important;
+}
+.svg-portal:hover{
+  fill: white;
+}
+.right-svg-box{
+  background-color: $white;
+  height: 28px;
+  width: 28px;
+}
+.right-svg-box:hover{
+  background: $black;
+  .svg-portal{
+    fill: white;
+  }
+}
+.right-portal-box{
+  position: fixed;
+  right: 8px;
+  top: 0;
+}
+.about-svg-box{
+  background-color: $white;
+  height: 28px;
+  width: 28px;
+  margin-top: 15px;
+}
+
+.about-svg-box:hover{
+  background: $black;
+  .svg-portal{
+    fill: white;
+  }
+}
