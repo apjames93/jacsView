@@ -7,6 +7,7 @@
      'jac.sidenav',
      'jac.rightportal',
      'jac.mobileNav',
+     'jac.work'
     //  'jac.topName'
 
    ])
