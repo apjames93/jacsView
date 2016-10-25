@@ -200,3 +200,11 @@ button {
   height: 25%;
   width: 25%;
   align-items: center; }
+
+.jacPic {
+  height: 30em;
+  width: auto; }
+
+.contact-svg {
+  height: 10em;
+  width: auto; }
