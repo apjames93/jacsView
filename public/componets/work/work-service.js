@@ -15,8 +15,7 @@
             method: 'get',
            url: 'http://localhost:3000/api/hair/'
          }).then(function successCallback(response) {
-           console.log(response);
-          deferred.resolve(response.data.user);
+          deferred.resolve(response.data.allData);
           }, function errorCallback(err) {
           deferred.reject(err);
         });

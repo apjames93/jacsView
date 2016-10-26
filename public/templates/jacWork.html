@@ -1,1 +1,14 @@
-hey
+<div class="" ng-repeat='data in mainCategory'>
+  <div class="col-xs-12 col-sm-6 col-md-4 work-container">
+    <h3
+      class="work-category text-center">{{data.category_name}}
+    </h3>
+    <div class="text-center">
+      <!-- <a ui-sref="allInCategory({id : data.category_name})" > -->
+        <img class='work-img' src="{{data.img}}" alt=""/>
+      <!-- </a> -->
+    </div>
+  </div>
+
+
+</div>
