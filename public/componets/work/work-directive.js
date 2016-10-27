@@ -64,7 +64,6 @@
           for (var j = 0; j < data.length; j++) {
             if (id[i].info === data[j].lookUp && id[i].lookUpId === undefined) {
               id[i].lookUpId = data[j];
-              console.log(id[i]);
               temp.push({category_name: id[i].lookUpId.category_name, img : id[i].lookUpId.img })
               $scope.mainCategory = temp
 

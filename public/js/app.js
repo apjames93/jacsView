@@ -7,7 +7,8 @@
      'jac.sidenav',
      'jac.rightportal',
      'jac.mobileNav',
-     'jac.work'
+     'jac.work',
+     'jac.type'
     //  'jac.topName'
 
    ])
@@ -37,5 +38,10 @@
               url: '/contact',
               templateUrl: '/templates/contact.html',
             });
+            $stateProvider
+              .state('type',{
+                url: '/category/:id',
+                templateUrl: '/templates/category.html',
+              });
       });
 })();

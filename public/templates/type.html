@@ -1,0 +1,18 @@
+<div class="type text-center" ng-repeat='info in type| limitTo : 1'>
+  <h1>{{info.category_name}}</h1>
+</div>
+
+<div class="row" ng-repeat='info in type'>
+
+  <div class="col-xs-12 col-sm-8">
+    <img class="album-img" ng-src="{{info.img}}" >
+  </div>
+
+  <div class="col-xs-12 col-sm-4 text-center">
+    <p>
+      {{info.description}}
+    </p>
+
+  </div>
+
+</div>
