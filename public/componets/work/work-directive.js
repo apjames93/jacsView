@@ -19,7 +19,6 @@
   function workController(workService, $scope, $filter) {
 
     _init = function() {
-      _getdata();
       _category();
     };
 
@@ -30,6 +29,7 @@
           sortArray.push(array[i]);
           }
       }
+      // console.log(sortArray);
       return sortArray;
     };
 
@@ -41,32 +41,39 @@
         for (var i = 0; i < data.length; i++) {
           category.push(data[i].lookUp);
         }
-        $scope.lookUpId = _sortData(category);
+        // console.log($scope.lookUpId);
+        var temp = _sortData(category);
+        var categoryId = [];
+        for (var i = 0; i < temp.length; i++) {
+          categoryId.push({ info: temp[i], lookUpId : undefined});
+        }
+        $scope.lookUpId = categoryId;
+
         _ShowData($scope.lookUpId);
 
       });
     };
 
-    _getdata = function(){
-      workService.getInfo()
-      .then(function(data){
-        $scope.work = data;
-      });
-    };
 
     _ShowData = function(data){
       var id = data;
-      var cat = [];
       workService.getInfo()
       .then(function(data){
-        for (var i = 0; i < data.length; i++) {
-          var curent = this[i];
-          if(data[i].lookUp === id[i]){
-            cat.push(data[i]);
+        var temp = [];
+        for (var i = 0; i < id.length; i++) {
+          for (var j = 0; j < data.length; j++) {
+            if (id[i].info === data[j].lookUp && id[i].lookUpId === undefined) {
+              id[i].lookUpId = data[j];
+              console.log(id[i]);
+              temp.push({category_name: id[i].lookUpId.category_name, img : id[i].lookUpId.img })
+              $scope.mainCategory = temp
+
+
+            }
           }
+
         }
-        $scope.mainCategory = cat;
-        console.log($scope.mainCategory);
+
       });
     };
 
