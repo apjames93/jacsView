@@ -1,0 +1,17 @@
+<div class="row">
+  <h4>login</h4>
+  <form class="col s6" ng-submit='submit(username, password)'>
+    <div class="row">
+      <div class="input-field col s6">
+        <input id="user_name" placeholder="User Name" ng-model='username'type="text" class="validate">
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s6">
+        <input id="password" placeholder="Password" ng-model='password'type="password" class="validate">
+      </div>
+    </div>
+    <button class="btn waves-effect waves-light" type="submit" name="action"  ng-click='submit(username, password)'>Log in
+    </button>
+  </form>
+</div>

@@ -9,7 +9,8 @@
      'jac.mobileNav',
      'jac.work',
      'jac.type',
-     'jac.admin'
+     'jac.login',
+     'jac.add'
 
    ])
 
@@ -23,30 +24,36 @@
 
       $urlRouterProvider.otherwise('/about');
 
-      $stateProvider
-        .state('home',{
-          url: '/about',
-          templateUrl: '/templates/home.html',
+        $stateProvider
+          .state('home',{
+            url: '/about',
+            templateUrl: '/templates/home.html',
+          });
+        $stateProvider
+          .state('work',{
+            url: '/work',
+            templateUrl: '/templates/work.html',
+          });
+        $stateProvider
+          .state('contact',{
+            url: '/contact',
+            templateUrl: '/templates/contact.html',
+          });
+        $stateProvider
+          .state('type',{
+            url: '/category/:id',
+            templateUrl: '/templates/category.html',
+          });
+        $stateProvider
+          .state('admin',{
+          url: '/admin',
+          templateUrl: '/templates/admin.html',
         });
-      $stateProvider
-        .state('work',{
-          url: '/work',
-          templateUrl: '/templates/work.html',
+        $stateProvider
+          .state('edit',{
+          url: '/editInfo',
+          templateUrl: '/templates/editInfo.html',
         });
-      $stateProvider
-        .state('contact',{
-          url: '/contact',
-          templateUrl: '/templates/contact.html',
-        });
-      $stateProvider
-        .state('type',{
-          url: '/category/:id',
-          templateUrl: '/templates/category.html',
-        });
-      $stateProvider
-        .state('admin',{
-        url: '/admin',
-        templateUrl: '/templates/admin.html',
-      });
+
       });
 })();

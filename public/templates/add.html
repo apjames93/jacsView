@@ -1,0 +1,24 @@
+<div class="row">
+  <h4>add</h4>
+  <form class="" action="index.html" method="post" ng-submit='addSubmit()'>
+    <div class="row">
+      <div class="input-field col s6">
+        <input  placeholder="" ng-model='description'type="text" class="validate">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s6">
+        <input  placeholder="" ng-model='img'type="text" class="validate">
+      </div>
+    </div>
+{{names}}
+<div class="" ng-repeat='item in names'>
+  {{item.category_name}}
+
+</div>
+<select ng-options="names.category_name for names in array track by names.id">
+</select>
+  </form>
+
+</div>
