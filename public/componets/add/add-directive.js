@@ -30,13 +30,9 @@
     };
 
     $scope.addSubmit = function(description, img, lookUp) {
-      console.log(description, img);
-      // addService.add(description, img, lookUp);
+      addService.add(description, img, lookUp.id);
     };
 
-    $scope.add = function(){
-      console.log('hit');
-    };
 
     _init();
   }

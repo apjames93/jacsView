@@ -13,10 +13,9 @@
 
 
       function add(description, img, lookUp){
-        console.log('service #####',description, img, lookUp);
         var deferred = $q.defer();
         $http({
-          method: 'put',
+          method: 'post',
           headers: {
             Authorization: 'Bearer ' + loginService.getToken()
           },
@@ -25,7 +24,7 @@
           img: img,
           lookUp: lookUp
           },
-          url: 'http://localhost:3000/api/'
+          url: 'http://localhost:3000/api/hair/'
         }).then(function successCallback(response) {
           deferred.resolve(response);
           $state.go($state.$current, null, { reload: true });
@@ -35,8 +34,6 @@
         });
           return deferred.promise;
       }
-
-
       function getCategory(){
         var deferred = $q.defer();
         $http({
