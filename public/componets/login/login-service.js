@@ -40,9 +40,8 @@
           url: 'http://localhost:3000/auth/login'
         })
         .then(function successCallback(response) {
-          console.log(response);
           _setUserData(response.data);
-          $location.path('/edit');
+          $location.path('/editInfo');
         }, function errorCallback(err) {
           console.log('login err', err);
         });

@@ -26,12 +26,16 @@
       addService.getCategory()
       .then(function(data){
         $scope.names = data.allData;
-        console.log('**************** names',$scope.names);
       });
     };
 
-    $scope.addSubmit = function() {
-      addService.add();
+    $scope.addSubmit = function(description, img, lookUp) {
+      console.log(description, img);
+      // addService.add(description, img, lookUp);
+    };
+
+    $scope.add = function(){
+      console.log('hit');
     };
 
     _init();

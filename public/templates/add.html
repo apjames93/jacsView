@@ -1,24 +1,39 @@
 <div class="row">
+
   <h4>add</h4>
-  <form class="" action="index.html" method="post" ng-submit='addSubmit()'>
-    <div class="row">
-      <div class="input-field col s6">
-        <input  placeholder="" ng-model='description'type="text" class="validate">
+
+  <form class="" action="" method="post" ng-submit='addSubmit(description, img, lookUp)'>
+      <div class="row">
+        <div class="input-field col s6">
+          <textarea  placeholder="description" ng-model='description'type="textarea" class="validate">
+          </textarea>
+        </div>
       </div>
-    </div>
 
     <div class="row">
       <div class="input-field col s6">
-        <input  placeholder="" ng-model='img'type="text" class="validate">
+
+        <input  placeholder="image URL" ng-model='img'type="text" class="validate">
+
       </div>
     </div>
-{{names}}
-<div class="" ng-repeat='item in names'>
-  {{item.category_name}}
 
-</div>
-<select ng-options="names.category_name for names in array track by names.id">
-</select>
+    <select>
+
+      <option ng-model="lookUp" ng-repeat="option in names" value="{{option.id}}">
+        {{option.category_name}}
+      </option>
+      
+    </select>
+
+    <button class="btn waves-effect waves-light" type="submit" name="">add new Item
+    </button>
+
   </form>
 
 </div>
+
+
+
+<button ng-click"add()" class="btn waves-effect waves-light" type="button" name="action">add new Item
+</button>

@@ -13,6 +13,7 @@
 
 
       function add(description, img, lookUp){
+        console.log('service #####',description, img, lookUp);
         var deferred = $q.defer();
         $http({
           method: 'put',
@@ -42,7 +43,6 @@
           method: 'get',
           url: 'http://localhost:3000/api/category/'
           }).then(function successCallback(response) {
-            console.log(response);
            deferred.resolve(response.data);
           }, function errorCallback(err) {
            deferred.reject(err);
